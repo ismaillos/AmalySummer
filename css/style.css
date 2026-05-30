@@ -277,7 +277,7 @@ section { padding: 96px 0; }
 }
 
 .nav-links a {
-  color: var(--primary);
+  color: var(--navy);
   font-size: 0.92rem;
   font-weight: 700;
   transition: var(--transition);
@@ -285,8 +285,8 @@ section { padding: 96px 0; }
   letter-spacing: 0.05em;
 }
 
-.nav-links a:hover { color: var(--primary-dark); }
-.nav-links a.active { color: var(--primary-dark); }
+.nav-links a:hover { color: var(--primary); }
+.nav-links a.active { color: var(--primary); }
 
 .nav-cta {
   margin-left: 8px;
