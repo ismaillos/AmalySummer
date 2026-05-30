@@ -669,21 +669,28 @@ section { padding: 96px 0; }
 
 .themes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   margin-top: 48px;
 }
 
+.themes-grid .theme-card:nth-child(1) { grid-column: 1 / 3; }
+.themes-grid .theme-card:nth-child(2) { grid-column: 3 / 5; }
+.themes-grid .theme-card:nth-child(3) { grid-column: 5 / 7; }
+.themes-grid .theme-card:nth-child(4) { grid-column: 2 / 4; }
+.themes-grid .theme-card:nth-child(5) { grid-column: 4 / 6; }
+
 .theme-card {
   border-radius: var(--radius-lg);
   padding: 32px 28px;
-  text-align: left;
+  text-align: center;
   position: relative;
   overflow: hidden;
   min-height: 180px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   transition: var(--transition);
 }
 
@@ -2230,6 +2237,7 @@ select.form-control { cursor: pointer; }
   .promises-grid { grid-template-columns: 1fr 1fr; }
   .experience-grid { grid-template-columns: repeat(2, 1fr); }
   .themes-grid { grid-template-columns: 1fr; }
+  .themes-grid .theme-card:nth-child(n) { grid-column: 1 / -1; }
   .comp-grid { grid-template-columns: 1fr 1fr; }
   .values-grid { grid-template-columns: 1fr 1fr; }
   .ecosystem-grid { grid-template-columns: 1fr 1fr; }
