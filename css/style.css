@@ -761,7 +761,27 @@ section { padding: 96px 0; }
 .comp-emoji { font-size: 1.5rem; }
 .comp-pillar-header h3 { font-size: 0.95rem; color: var(--navy); }
 
+.comp-desc {
+  font-size: 0.82rem;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
 .comp-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+
+.research-note {
+  margin-top: 52px;
+  text-align: center;
+  padding: 20px 32px;
+  border-top: 1px solid var(--border);
+}
+
+.research-note p {
+  font-size: 0.82rem;
+  color: var(--gray-lt);
+  font-style: italic;
+}
 
 .comp-tag {
   font-size: 0.72rem;
