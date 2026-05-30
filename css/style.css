@@ -1110,7 +1110,65 @@ footer ul li a:hover { color: var(--primary); }
 .timeline-content-right h3 { font-size: 1.15rem; color: var(--navy); margin-bottom: 8px; }
 
 .timeline-content-left p,
-.timeline-content-right p { font-size: 0.85rem; color: var(--gray); }
+.timeline-content-right p { font-size: 0.85rem; color: var(--gray); line-height: 1.6; margin-bottom: 8px; }
+
+.timeline-question {
+  font-style: italic;
+  font-size: 0.82rem !important;
+  color: var(--primary) !important;
+  margin-bottom: 6px !important;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.timeline-tags span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--light);
+  color: var(--navy);
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+/* Outcomes block */
+.camp-outcomes {
+  margin-top: 64px;
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: 40px 48px;
+  text-align: center;
+}
+
+.camp-outcomes h3 {
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 28px;
+}
+
+.outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  text-align: left;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.outcome-item {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 10px 16px;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
 
 /* ============================================
    WEEKLY RHYTHM
