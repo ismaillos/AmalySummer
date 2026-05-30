@@ -8,11 +8,11 @@
 
 :root {
   /* AMALY Brand Palette — exact logo tile colors */
-  --coral:    #F4858C;   /* A — coral pink */
-  --mint:     #6DCEC8;   /* M — teal aqua */
-  --peach:    #7FA8D8;   /* A — periwinkle blue */
-  --yellow:   #F5BA7A;   /* L — peach */
-  --lavender: #C48ED4;   /* Y — purple */
+  --coral:    #E8716A;   /* A — coral salmon */
+  --mint:     #7ECBB5;   /* M — sage mint */
+  --peach:    #8BADD4;   /* A — periwinkle blue */
+  --yellow:   #F0B870;   /* L — warm peach */
+  --lavender: #A07EC8;   /* Y — medium purple */
 
   /* Primary action color (exact from amalykidsclub.com) */
   --primary:  #fb6b47;
@@ -115,55 +115,60 @@ section { padding: 96px 0; }
 .logo-tiles {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: -4px; /* overlapping handled by margin */
 }
 
 .tile {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  font-family: var(--font-head);
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: white;
   letter-spacing: 0;
   line-height: 1;
-  /* slight tilt for playful feel */
-  transform: rotate(-2deg);
+  margin-right: -4px; /* overlapping tiles */
+  position: relative;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.12);
 }
 
-.tile:nth-child(2) { transform: rotate(2deg); }
-.tile:nth-child(3) { transform: rotate(-1.5deg); }
-.tile:nth-child(4) { transform: rotate(2.5deg); }
-.tile:nth-child(5) { transform: rotate(-2deg); }
+/* Cascading tilt — matches the logo exactly */
+.tile:nth-child(1) { transform: rotate(-6deg) translateY(2px); z-index: 5; }
+.tile:nth-child(2) { transform: rotate(-2deg) translateY(-2px); z-index: 4; }
+.tile:nth-child(3) { transform: rotate(3deg) translateY(1px); z-index: 3; }
+.tile:nth-child(4) { transform: rotate(5deg) translateY(3px); z-index: 2; }
+.tile:nth-child(5) { transform: rotate(2deg) translateY(-1px); z-index: 1; margin-right: 0; }
 
-.tile-coral   { background: var(--coral); }
-.tile-mint    { background: var(--mint); }
-.tile-peach   { background: var(--peach); }
-.tile-yellow  { background: var(--yellow); color: white; }
-.tile-lavender{ background: var(--lavender); }
+.tile-coral   { background: #E8716A; } /* A — coral salmon */
+.tile-mint    { background: #7ECBB5; } /* M — sage mint */
+.tile-peach   { background: #8BADD4; } /* A — periwinkle blue */
+.tile-yellow  { background: #F0B870; color: white; } /* L — warm peach */
+.tile-lavender{ background: #A07EC8; } /* Y — medium purple */
 
 .tile-dot {
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 0.75rem;
   color: var(--primary);
-  margin-left: 3px;
+  margin-left: 10px;
   margin-top: 8px;
 }
 
 /* Large logo variant */
 .logo-tiles.lg .tile {
-  width: 52px; height: 52px;
-  border-radius: 13px;
-  font-size: 1.7rem;
+  width: 58px; height: 58px;
+  border-radius: 16px;
+  font-size: 2rem;
+  margin-right: -6px;
 }
 .logo-tiles.lg .tile-dot {
   font-size: 1rem;
   margin-top: 14px;
+  margin-left: 14px;
 }
 
 /* ============================================
@@ -244,11 +249,11 @@ section { padding: 96px 0; }
 .top-stripe {
   height: 8px;
   background: linear-gradient(90deg,
-    #F4858C 0% 20%,
-    #6DCEC8 20% 40%,
-    #7FA8D8 40% 60%,
-    #F5BA7A 60% 80%,
-    #C48ED4 80% 100%
+    #E8716A 0% 20%,
+    #7ECBB5 20% 40%,
+    #8BADD4 40% 60%,
+    #F0B870 60% 80%,
+    #A07EC8 80% 100%
   );
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -1188,6 +1193,271 @@ footer ul li a:hover { color: var(--primary); }
   background: white;
   border-radius: var(--radius);
   border: 1px solid var(--border);
+}
+
+/* ============================================
+   WEEK CARDS GRID
+   ============================================ */
+.weeks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+
+.week-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  border-top: 5px solid var(--week-color, var(--primary));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.week-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.week-card-festival {
+  grid-column: span 1;
+  background: linear-gradient(135deg, #fdf6ff 0%, #f0f4ff 100%);
+}
+
+.week-header {
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.week-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--week-color, var(--primary));
+  margin-bottom: 6px;
+}
+
+.week-header h3 {
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.week-question {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--gray);
+  line-height: 1.5;
+}
+
+.week-body { padding: 20px 24px 24px; }
+
+.week-focus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.week-focus span {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--light);
+  color: var(--navy);
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+.week-activities {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.week-activities li {
+  font-size: 0.82rem;
+  color: var(--gray);
+  padding: 4px 0;
+  padding-left: 16px;
+  position: relative;
+}
+
+.week-activities li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--week-color, var(--primary));
+  font-size: 0.75rem;
+}
+
+.week-artifact {
+  background: var(--light);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.artifact-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+}
+
+.artifact-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.week-workshop {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--week-color, var(--primary));
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* Continuous Challenges */
+.continuous-challenges {
+  margin-top: 56px;
+  text-align: center;
+  padding: 40px;
+  background: var(--light);
+  border-radius: var(--radius-lg);
+}
+
+.continuous-challenges h3 {
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 20px;
+}
+
+.challenges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.challenge-pill {
+  font-size: 0.88rem;
+  font-weight: 700;
+  background: white;
+  color: var(--navy);
+  padding: 8px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--border);
+}
+
+.clubs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.club-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: var(--primary);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 100px;
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+.testimonials { background: var(--cream); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.yt-placeholder { background: var(--navy); }
+
+.yt-thumb {
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  cursor: pointer;
+  position: relative;
+}
+
+.yt-play {
+  width: 52px; height: 52px;
+  background: #FF0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+  padding-left: 4px;
+  box-shadow: 0 4px 16px rgba(255,0,0,0.4);
+}
+
+.yt-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.testimonial-body { padding: 20px; }
+
+.testimonial-quote {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.testimonial-quote::before { content: '"'; color: var(--primary); font-size: 1.2rem; }
+.testimonial-quote::after  { content: '"'; color: var(--primary); font-size: 1.2rem; }
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial-author strong { font-size: 0.88rem; color: var(--navy); }
+.testimonial-author span   { font-size: 0.78rem; color: var(--gray); }
+
+/* Responsive weeks */
+@media (max-width: 1024px) {
+  .weeks-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .weeks-grid { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================
