@@ -175,6 +175,71 @@ function showToast(message, type = 'success') {
   }, 4000);
 }
 
+// --- WHATSAPP WIDGET ---
+(function () {
+  const WA_NUMBER = '212661527252';
+  const WA_PREFILL = encodeURIComponent('Bonjour AMALY ! Je suis intéressé(e) par le Summer Camp 2026. Pouvez-vous me donner plus d\'informations ?');
+
+  const widget = document.createElement('div');
+  widget.className = 'wa-widget';
+  widget.innerHTML = `
+    <div class="wa-bubble" id="wa-bubble">
+      <div class="wa-bubble-header">
+        <div class="wa-avatar">🌟</div>
+        <div class="wa-info">
+          <strong>AMALY Summer Camp</strong>
+          <span><span class="wa-online"></span>Équipe AMALY</span>
+        </div>
+      </div>
+      <div class="wa-body">
+        <div class="wa-msg">
+          Bonjour ! 👋 Bienvenue sur AMALY Universe.<br><br>
+          Comment pouvons-nous vous aider avec le Summer Camp 2026 ?
+          <div class="wa-time">Aujourd'hui</div>
+        </div>
+      </div>
+      <div class="wa-footer">
+        <input class="wa-input" id="wa-input" type="text" placeholder="Écrivez votre message…" />
+        <button class="wa-send" id="wa-send" aria-label="Envoyer">
+          <svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="wa-toggle" id="wa-toggle" aria-label="Chat WhatsApp">
+      <span class="wa-notification">1</span>
+      <svg class="wa-open-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.522 5.831L0 24l6.335-1.502A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.875 9.875 0 01-5.031-1.374l-.361-.214-3.741.981.999-3.648-.235-.374A9.867 9.867 0 012.118 12C2.118 6.535 6.535 2.118 12 2.118S21.882 6.535 21.882 12 17.465 21.882 12 21.882z"/></svg>
+      <svg class="wa-close-icon" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  `;
+  document.body.appendChild(widget);
+
+  const toggle = document.getElementById('wa-toggle');
+  const bubble = document.getElementById('wa-bubble');
+  const sendBtn = document.getElementById('wa-send');
+  const input = document.getElementById('wa-input');
+  const notif = widget.querySelector('.wa-notification');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = bubble.classList.contains('open');
+    bubble.classList.toggle('open');
+    toggle.classList.toggle('active');
+    if (notif) notif.style.display = 'none';
+    if (!isOpen) setTimeout(() => input.focus(), 350);
+  });
+
+  function openWhatsApp() {
+    const msg = input.value.trim()
+      ? encodeURIComponent(input.value.trim())
+      : WA_PREFILL;
+    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
+  }
+
+  sendBtn.addEventListener('click', openWhatsApp);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') openWhatsApp();
+  });
+})();
+
 // --- REGISTRATION SUCCESS STATE ---
 function showSuccessState() {
   const form = document.getElementById('registration-form');
