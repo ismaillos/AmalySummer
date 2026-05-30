@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — AMALY Summer Camp 2025</title>
+  <meta name="description" content="Register your child for AMALY Summer Camp 2025. Ages 5–10. 29 June – 9 August." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled">
+  <div class="navbar-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">A</div>
+      <div class="logo-text">AMALY <span>Universe</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="summer-camp.html">Summer Camp</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html" class="btn btn-primary nav-cta active">Register Now</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+  <button class="mobile-nav-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="summer-camp.html">Summer Camp</a>
+  <a href="about.html">About</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="register.html" class="btn btn-primary">Register Now</a>
+</div>
+
+<!-- HERO -->
+<section class="register-hero">
+  <div class="container">
+    <div class="section-label">Enrollment Open</div>
+    <h1 style="font-size: clamp(2rem, 5vw, 3.2rem); color: white; margin-bottom: 16px;">Register for Summer Camp 2025</h1>
+    <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 520px; margin: 0 auto;">
+      Complete this form to secure your child's spot. You'll receive payment instructions by email immediately after submission.
+    </p>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section class="register-section">
+  <div class="register-container" id="register-container">
+
+    <!-- PROGRESS -->
+    <div class="form-progress">
+      <div class="progress-step">
+        <div class="step-dot active">1</div>
+        <div class="step-label active">Parent Info</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="progress-step">
+        <div class="step-dot active">2</div>
+        <div class="step-label active">Child Info</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="progress-step">
+        <div class="step-dot active">3</div>
+        <div class="step-label active">Package</div>
+      </div>
+      <div class="step-line"></div>
+      <div class="progress-step">
+        <div class="step-dot active">4</div>
+        <div class="step-label active">Agreements</div>
+      </div>
+    </div>
+
+    <form id="registration-form" novalidate>
+
+      <!-- SECTION 1: PARENT INFORMATION -->
+      <div class="form-card">
+        <h2 class="form-card-title">👨‍👩‍👧 Parent Information</h2>
+        <p class="form-card-sub">We'll use this to send confirmation, payment details, and all communications.</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="parent-first">First Name <span class="required">*</span></label>
+            <input type="text" id="parent-first" name="parent_first" class="form-control" placeholder="Yasmine" required />
+          </div>
+          <div class="form-group">
+            <label for="parent-last">Last Name <span class="required">*</span></label>
+            <input type="text" id="parent-last" name="parent_last" class="form-control" placeholder="Idrissi" required />
+          </div>
+          <div class="form-group">
+            <label for="parent-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="parent-email" name="parent_email" class="form-control" placeholder="yasmine@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="parent-phone">Phone / WhatsApp <span class="required">*</span></label>
+            <input type="tel" id="parent-phone" name="parent_phone" class="form-control" placeholder="+212 6XX XXX XXX" required />
+          </div>
+          <div class="form-group">
+            <label for="parent-country">Country <span class="required">*</span></label>
+            <select id="parent-country" name="parent_country" class="form-control" required>
+              <option value="">Select your country</option>
+              <option value="MA" selected>Morocco 🇲🇦</option>
+              <option value="FR">France 🇫🇷</option>
+              <option value="BE">Belgium 🇧🇪</option>
+              <option value="CA">Canada 🇨🇦</option>
+              <option value="AE">UAE 🇦🇪</option>
+              <option value="SA">Saudi Arabia 🇸🇦</option>
+              <option value="NL">Netherlands 🇳🇱</option>
+              <option value="ES">Spain 🇪🇸</option>
+              <option value="DE">Germany 🇩🇪</option>
+              <option value="GB">United Kingdom 🇬🇧</option>
+              <option value="US">United States 🇺🇸</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="parent-city">City <span class="required">*</span></label>
+            <input type="text" id="parent-city" name="parent_city" class="form-control" placeholder="Casablanca" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: CHILD INFORMATION -->
+      <div class="form-card">
+        <h2 class="form-card-title">🧒 Child Information</h2>
+        <p class="form-card-sub">Tell us about your child so we can personalize their experience.</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="child-name">Child's Full Name <span class="required">*</span></label>
+            <input type="text" id="child-name" name="child_name" class="form-control" placeholder="Adam Idrissi" required />
+          </div>
+          <div class="form-group">
+            <label for="child-age">Age <span class="required">*</span></label>
+            <select id="child-age" name="child_age" class="form-control" required>
+              <option value="">Select age</option>
+              <option value="5">5 years old</option>
+              <option value="6">6 years old</option>
+              <option value="7">7 years old</option>
+              <option value="8">8 years old</option>
+              <option value="9">9 years old</option>
+              <option value="10">10 years old</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="child-dob">Date of Birth <span class="required">*</span></label>
+            <input type="date" id="child-dob" name="child_dob" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="child-language">Preferred Language <span class="required">*</span></label>
+            <select id="child-language" name="child_language" class="form-control" required>
+              <option value="">Select language</option>
+              <option value="arabic">Arabic</option>
+              <option value="french">French</option>
+              <option value="english">English</option>
+              <option value="bilingual-ar-fr">Bilingual (Arabic / French)</option>
+              <option value="bilingual-ar-en">Bilingual (Arabic / English)</option>
+              <option value="trilingual">Trilingual (Arabic / French / English)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: PACKAGE SELECTION -->
+      <div class="form-card">
+        <h2 class="form-card-title">📦 Package Selection</h2>
+        <p class="form-card-sub">Choose the experience that suits your family best. Both include full digital access.</p>
+
+        <div class="package-options">
+          <div class="package-option">
+            <input type="radio" name="package" id="pkg-basic" value="basic" checked />
+            <label for="pkg-basic">
+              <div class="pkg-name">Basic</div>
+              <div class="pkg-desc">Full digital experience via Google Classroom, WhatsApp community, and live workshops.</div>
+            </label>
+          </div>
+          <div class="package-option">
+            <input type="radio" name="package" id="pkg-basic-plus" value="basic-plus" />
+            <label for="pkg-basic-plus">
+              <div class="pkg-name">Basic+</div>
+              <div class="pkg-desc">Everything in Basic plus a physical Mission Box shipped to your home.</div>
+              <div class="pkg-badge">Most Popular</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Conditional Address Section -->
+        <div id="address-section">
+          <div class="address-note">
+            📦 <div>Since you've selected <strong>Basic+</strong>, we need your shipping address to deliver your Mission Box before camp starts.</div>
+          </div>
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="address">Street Address <span class="required">*</span></label>
+              <input type="text" id="address" name="address" class="form-control" placeholder="123 Rue de l'Université" />
+            </div>
+            <div class="form-group">
+              <label for="address-city">City <span class="required">*</span></label>
+              <input type="text" id="address-city" name="address_city" class="form-control" placeholder="Casablanca" />
+            </div>
+            <div class="form-group">
+              <label for="postal-code">Postal Code</label>
+              <input type="text" id="postal-code" name="postal_code" class="form-control" placeholder="20000" />
+            </div>
+            <div class="form-group full">
+              <label for="delivery-notes">Delivery Notes (optional)</label>
+              <input type="text" id="delivery-notes" name="delivery_notes" class="form-control" placeholder="Apartment number, landmark, preferred delivery time…" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: PARENTAL AGREEMENTS -->
+      <div class="form-card">
+        <h2 class="form-card-title">📋 Parental Agreements</h2>
+        <p class="form-card-sub">Please read and accept the following before submitting your registration.</p>
+
+        <div class="agreements-list">
+          <div class="agreements-divider">Mandatory</div>
+
+          <label class="agreement-item">
+            <input type="checkbox" class="mandatory-check" required />
+            <span class="agreement-text">I agree to the AMALY Summer Camp 2025 participation conditions and program guidelines.</span>
+          </label>
+
+          <label class="agreement-item">
+            <input type="checkbox" class="mandatory-check" required />
+            <span class="agreement-text">I understand that internet use during the program remains under parental supervision and responsibility.</span>
+          </label>
+
+          <label class="agreement-item">
+            <input type="checkbox" class="mandatory-check" required />
+            <span class="agreement-text">I consent to receiving email and WhatsApp communications related to the AMALY program and my child's participation.</span>
+          </label>
+
+          <label class="agreement-item">
+            <input type="checkbox" class="mandatory-check" required />
+            <span class="agreement-text">I acknowledge that AMALY may contact me regarding registration, payment, and program activities.</span>
+          </label>
+
+          <label class="agreement-item">
+            <input type="checkbox" class="mandatory-check" required />
+            <span class="agreement-text">I authorize my child to participate in online workshops, live sessions, and community activities on Google Meet and Google Classroom.</span>
+          </label>
+
+          <div class="agreements-divider" style="margin-top: 8px;">Optional</div>
+
+          <label class="agreement-item optional">
+            <input type="checkbox" />
+            <span class="agreement-text">I authorize AMALY to use photos and/or videos of my child for educational documentation and communication purposes (website, social media, promotional materials).</span>
+          </label>
+
+          <label class="agreement-item optional">
+            <input type="checkbox" />
+            <span class="agreement-text">I would like to subscribe to the AMALY newsletter to receive updates, tips, and news about future programs.</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- SUBMIT -->
+      <div class="form-submit-area">
+        <button type="submit" class="btn btn-primary btn-lg submit-btn">
+          Complete Registration →
+        </button>
+        <p class="form-submit-note">
+          🔒 Your information is secure and will never be shared with third parties.<br>
+          Registration status will be <strong>PENDING PAYMENT</strong> until payment is confirmed.
+        </p>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark">A</div>
+          <div class="logo-text">AMALY <span>Universe</span></div>
+        </div>
+        <p>A learning adventure where children build character, creativity, future skills, and confidence.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link">📷</a>
+          <a href="#" class="social-link">💬</a>
+          <a href="#" class="social-link">📘</a>
+        </div>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="summer-camp.html">View Packages</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@amaly.ma">contact@amaly.ma</a></li>
+          <li><a href="#">@amalykidsclub</a></li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 AMALY Universe. All rights reserved.</span>
+      <span>Made with ❤️ for the children of tomorrow</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Pre-select package from URL param
+  const urlParams = new URLSearchParams(window.location.search);
+  const pkg = urlParams.get('package');
+  if (pkg === 'basic-plus') {
+    document.getElementById('pkg-basic-plus').checked = true;
+    document.getElementById('address-section').classList.add('visible');
+  }
+</script>
+</body>
+</html>
