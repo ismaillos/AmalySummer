@@ -272,7 +272,7 @@ section { padding: 96px 0; }
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 68px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -378,7 +378,7 @@ section { padding: 96px 0; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 76px; /* navbar + stripe */
+  padding-top: 96px; /* navbar + stripe */
 }
 
 /* Wavy bottom edge like the original site */
@@ -888,6 +888,102 @@ section { padding: 96px 0; }
 .gallery-item:nth-child(5) { background: linear-gradient(135deg, #EAE0F5, #DDD0F0); }
 
 /* ============================================
+   SOCIAL CHANNELS SECTION
+   ============================================ */
+.social-channels { background: #FFFAF7; text-align: center; }
+
+.social-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.social-channel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 36px 28px;
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: var(--transition);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-channel-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+}
+
+.sc-youtube { background: rgba(255,0,0,0.05); border-color: rgba(255,0,0,0.12); }
+.sc-youtube::before { background: #FF0000; }
+.sc-youtube:hover { border-color: #FF0000; transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+.sc-instagram { background: rgba(225,48,108,0.05); border-color: rgba(225,48,108,0.12); }
+.sc-instagram::before { background: linear-gradient(90deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.sc-instagram:hover { border-color: #dc2743; transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+.sc-linkedin { background: rgba(0,119,181,0.05); border-color: rgba(0,119,181,0.12); }
+.sc-linkedin::before { background: #0077B5; }
+.sc-linkedin:hover { border-color: #0077B5; transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+.sc-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.sc-logo {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+  padding: 8px;
+}
+
+.sc-logo img { width: 28px; height: 28px; display: block; }
+
+.sc-platform {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gray);
+}
+
+.sc-name {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.2;
+}
+
+.sc-desc {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.sc-cta {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+/* ============================================
    HOME FINAL CTA
    ============================================ */
 .home-cta {
@@ -1005,7 +1101,7 @@ footer ul li a:hover { color: var(--primary); }
   background: var(--navy);
   display: flex;
   align-items: center;
-  padding-top: 76px;
+  padding-top: 96px;
   position: relative;
   overflow: hidden;
 }
@@ -2285,6 +2381,7 @@ select.form-control { cursor: pointer; }
   .experience-grid { grid-template-columns: repeat(3, 1fr); }
   .comp-grid { grid-template-columns: repeat(3, 1fr); }
   .ecosystem-grid { grid-template-columns: repeat(2, 1fr); }
+  .social-channels-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 1024px) {
