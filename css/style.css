@@ -8,11 +8,11 @@
 
 :root {
   /* AMALY Brand Palette — exact logo tile colors */
-  --coral:    #F08080;   /* A — warm coral/salmon */
-  --mint:     #7EC8B8;   /* M — sage mint green */
-  --peach:    #F5AA72;   /* A — warm peach */
-  --yellow:   #F5C84A;   /* L — golden yellow */
-  --lavender: #C4A8E0;   /* Y — soft lavender */
+  --coral:    #F4858C;   /* A — coral pink */
+  --mint:     #6DCEC8;   /* M — teal aqua */
+  --peach:    #7FA8D8;   /* A — periwinkle blue */
+  --yellow:   #F5BA7A;   /* L — peach */
+  --lavender: #C48ED4;   /* Y — purple */
 
   /* Primary action color (exact from amalykidsclub.com) */
   --primary:  #fb6b47;
@@ -132,7 +132,7 @@ section { padding: 96px 0; }
 .tile-coral   { background: var(--coral); }
 .tile-mint    { background: var(--mint); }
 .tile-peach   { background: var(--peach); }
-.tile-yellow  { background: var(--yellow); color: #5a4500; }
+.tile-yellow  { background: var(--yellow); color: white; }
 .tile-lavender{ background: var(--lavender); }
 
 .tile-dot {
@@ -233,16 +233,11 @@ section { padding: 96px 0; }
 .top-stripe {
   height: 8px;
   background: linear-gradient(90deg,
-    var(--coral) 0%,
-    var(--coral) 20%,
-    var(--mint) 20%,
-    var(--mint) 40%,
-    var(--peach) 40%,
-    var(--peach) 60%,
-    var(--yellow) 60%,
-    var(--yellow) 80%,
-    var(--lavender) 80%,
-    var(--lavender) 100%
+    #F4858C 0% 20%,
+    #6DCEC8 20% 40%,
+    #7FA8D8 40% 60%,
+    #F5BA7A 60% 80%,
+    #C48ED4 80% 100%
   );
   position: fixed;
   top: 0; left: 0; right: 0;
