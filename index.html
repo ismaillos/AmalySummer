@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMALY Universe — Discover. Create. Lead. Impact.</title>
-  <meta name="description" content="A learning adventure where children build character, creativity, future skills, and confidence while making a positive impact in the world." />
+  <title>AMALY Universe — Summer Camp 2026</title>
+  <meta name="description" content="AMALY Summer Camp 2026 — a 5-week online adventure for children aged 6–14. Build identity, sharpen thinking, and leave a mark on the world." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
@@ -15,7 +15,7 @@
 <div class="top-stripe"></div>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav class="navbar" id="navbar">
   <div class="navbar-inner">
     <a href="index.html" style="text-decoration:none;display:flex;align-items:center;">
       <img src="images/amaly-logo-header.png" alt="AMALY" style="height:150px;width:auto;" />
@@ -28,7 +28,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="register.html" class="btn btn-primary nav-cta">Register Now</a></li>
     </ul>
-    <div class="hamburger" id="hamburger">
+    <div class="hamburger">
       <span></span><span></span><span></span>
     </div>
   </div>
@@ -36,7 +36,7 @@
 
 <!-- MOBILE NAV -->
 <div class="mobile-nav">
-  <button class="mobile-nav-close">✕</button>
+  <button class="mobile-nav-close">&#x2715;</button>
   <a href="index.html">Home</a>
   <a href="summer-camp.html">Summer Camp</a>
   <a href="about.html">About</a>
@@ -46,362 +46,368 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero fullpage-section">
   <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span class="dot"></span>
-        Summer Camp 2026 — Enrolling Now
-      </div>
-      <h1 class="hero-title">
-        Discover. Create.<br>Lead. <span class="highlight">Impact.</span>
-      </h1>
-      <p class="hero-sub">
-        A learning adventure where children grow into who they truly are —
-        rooted in identity, open to the world, ready for the future.
-      </p>
-      <div class="hero-ctas">
-        <a href="summer-camp.html" class="btn btn-primary btn-lg">Join Summer Camp</a>
-        <a href="#promises" class="btn btn-secondary btn-lg">Learn More</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>5</strong>
-          <span>Weeks of Learning</span>
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="section-label">Summer Camp 2026 &middot; Enrollment Open</div>
+        <h1 class="hero-title">
+          Where Children<br>
+          <span style="color: var(--primary);">Discover. Create.</span><br>
+          Lead. Impact.
+        </h1>
+        <p class="hero-sub">
+          A 5-week online adventure for children aged 6&ndash;14 &mdash; where they build identity, sharpen their thinking, and leave a real mark on the world.
+        </p>
+        <div class="hero-ctas">
+          <a href="register.html" class="btn btn-primary btn-lg">Enroll Your Child &rarr;</a>
+          <a href="summer-camp.html" class="btn btn-outline btn-lg">Explore the Program</a>
         </div>
-        <div class="hero-stat">
-          <strong>6–14</strong>
-          <span>Years Old</span>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">5</span>
+            <span class="hero-stat-label">Weeks</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">6&ndash;14</span>
+            <span class="hero-stat-label">Years Old</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">100%</span>
+            <span class="hero-stat-label">Online</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">5</span>
+            <span class="hero-stat-label">Pillars</span>
+          </div>
         </div>
-        <div class="hero-stat">
-          <strong>Summer</strong>
-          <span>2026</span>
+      </div>
+      <div class="hero-visual">
+        <div class="floating-cards">
+          <div class="float-card">
+            <div class="float-icon">&#127775;</div>
+            <div class="float-label">Identity</div>
+            <div class="float-sub">Who am I?</div>
+          </div>
+          <div class="float-card">
+            <div class="float-icon">&#9823;&#65039;</div>
+            <div class="float-label">Chess &amp; Logic</div>
+            <div class="float-sub">Think Deeper</div>
+          </div>
+          <div class="float-card">
+            <div class="float-icon">&#127912;</div>
+            <div class="float-label">Creative Projects</div>
+            <div class="float-sub">Build &amp; Make</div>
+          </div>
+          <div class="float-card">
+            <div class="float-icon">&#128640;</div>
+            <div class="float-label">Future Skills</div>
+            <div class="float-sub">Lead &amp; Grow</div>
+          </div>
+          <div class="float-card">
+            <div class="float-icon">&#127757;</div>
+            <div class="float-label">Global Impact</div>
+            <div class="float-sub">Change the World</div>
+          </div>
         </div>
-        <div class="hero-stat">
-          <strong>5</strong>
-          <span>Pillars</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="floating-cards">
-      <div class="float-card">
-        <div class="float-icon">♟️</div>
-        <div class="float-label">Chess & Logic</div>
-        <div class="float-sub">Thinking Pillar</div>
-      </div>
-      <div class="float-card">
-        <div class="float-icon">🎨</div>
-        <div class="float-label">Creative Projects</div>
-        <div class="float-sub">Creation Pillar</div>
-      </div>
-      <div class="float-card">
-        <div class="float-icon">🌍</div>
-        <div class="float-label">Global Missions</div>
-        <div class="float-sub">Impact Pillar</div>
-      </div>
-      <div class="float-card">
-        <div class="float-icon">🚀</div>
-        <div class="float-label">Future Skills</div>
-        <div class="float-sub">Leadership & AI</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 2: THE FIVE PILLARS -->
-<section id="promises" class="promises">
+<!-- PILLARS -->
+<section class="promises fullpage-section">
   <div class="container">
     <div style="text-align:center;">
-      <div class="section-label">Our Five Pillars</div>
-      <h2 class="section-title">What AMALY Builds in Every Child</h2>
-      <p class="section-sub">Each pillar answers a question every child is asking — shaping who they are,
-        how they think, and what they give to the world.</p>
+      <div class="section-label">Five Pillars of Growth</div>
+      <h2 class="section-title">What Every Child Builds at AMALY</h2>
+      <p class="section-sub">Five interconnected pillars &mdash; each week deepens one, and all five come together by the final Festival.</p>
     </div>
     <div class="promises-grid">
       <div class="promise-card">
-        <div class="promise-icon">🌟</div>
-        <h3>Identity &amp; Heritage</h3>
-        <p>Who am I? Children discover their roots, values, and unique story — grounded in Moroccan and Arab heritage, open to the world.</p>
+        <div class="promise-icon">&#127775;</div>
+        <h3>Identity &amp; Values</h3>
+        <p>Who they are, where they come from, and what they stand for &mdash; the foundation that makes everything else meaningful.</p>
       </div>
       <div class="promise-card">
-        <div class="promise-icon">🔭</div>
-        <h3>Thinking &amp; Discovery</h3>
-        <p>How does the world work? Logic, chess, soroban, and science exploration sharpen the mind and nurture deep curiosity.</p>
+        <div class="promise-icon">&#129504;</div>
+        <h3>Critical Thinking</h3>
+        <p>Chess, logic puzzles, and AI literacy train the mind to question, analyze, and decide &mdash; skills that last a lifetime.</p>
       </div>
       <div class="promise-card">
-        <div class="promise-icon">⚡</div>
-        <h3>Creation &amp; Innovation</h3>
-        <p>What can I create? Crafts, coding, design, and AI projects transform children from consumers into builders.</p>
+        <div class="promise-icon">&#127912;</div>
+        <h3>Creativity &amp; Making</h3>
+        <p>Storytelling, calligraphy, DIY projects &mdash; children learn to express themselves and turn ideas into reality.</p>
       </div>
       <div class="promise-card">
-        <div class="promise-icon">🎯</div>
-        <h3>Future Skills</h3>
-        <p>How can I thrive? Communication, entrepreneurship, and leadership prepare children for a world we can't yet fully imagine.</p>
+        <div class="promise-icon">&#128640;</div>
+        <h3>Leadership &amp; Collaboration</h3>
+        <p>Team challenges, live workshops, and community projects build the confidence to lead and the empathy to connect.</p>
       </div>
       <div class="promise-card">
-        <div class="promise-icon">🤝</div>
-        <h3>Community &amp; Impact</h3>
-        <p>How can I help? SDGs, sustainability, and global citizenship connect children from Morocco to the world.</p>
+        <div class="promise-icon">&#127757;</div>
+        <h3>Global Citizenship</h3>
+        <p>Rooted in Moroccan heritage, open to the world &mdash; children engage with the SDGs and discover how they can make a difference.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SECTION 4: WHAT YOUR CHILD WILL EXPLORE -->
-<section class="themes">
+<!-- JOURNEY -->
+<section class="themes fullpage-section">
   <div class="container">
     <div style="text-align:center;">
-      <div class="section-label">Summer Camp 2026</div>
-      <h2 class="section-title">What Your Child Will Explore &amp; Impact</h2>
-      <p class="section-sub">5 weeks of discovery, creation, and growth. Each week has a big question children explore through missions, live sessions, creative projects, and community challenges.</p>
+      <div class="section-label">The 5-Week Journey</div>
+      <h2 class="section-title">Every Week, a New Adventure</h2>
+      <p class="section-sub">Each week has a big question, a dedicated theme, and daily live sessions &mdash; building toward a grand finale.</p>
     </div>
-
     <div class="journey-timeline">
-      <!-- connecting line -->
       <div class="journey-line"></div>
 
-      <!-- Week 1 -->
       <div class="journey-step" style="--step-color:#E8716A">
         <div class="journey-card journey-card--top">
-          <div class="journey-emoji">🌍</div>
+          <div class="journey-emoji">&#127757;</div>
           <div class="journey-week">Week 1</div>
-          <h3>SDGs &amp; Digital Explorers</h3>
-          <p>How can we use technology to make the world better? Children explore the SDGs, AI, and digital literacy.</p>
+          <h3>Explorer</h3>
+          <p>SDGs, digital skills &amp; civic awareness &mdash; what does it mean to change the world?</p>
         </div>
         <div class="journey-dot"><span>1</span></div>
         <div class="journey-spacer"></div>
       </div>
 
-      <!-- Week 2 -->
       <div class="journey-step" style="--step-color:#7ECBB5">
         <div class="journey-spacer"></div>
         <div class="journey-dot"><span>2</span></div>
         <div class="journey-card journey-card--bottom">
-          <div class="journey-emoji">🌟</div>
+          <div class="journey-emoji">&#127775;</div>
           <div class="journey-week">Week 2</div>
-          <h3>Identity &amp; Values</h3>
-          <p>Who am I, and what values guide my actions? Identity passport, character, and emotional intelligence.</p>
+          <h3>Identity</h3>
+          <p>Values, heritage &amp; self &mdash; who am I, and what do I stand for?</p>
         </div>
       </div>
 
-      <!-- Week 3 -->
       <div class="journey-step" style="--step-color:#8BADD4">
         <div class="journey-card journey-card--top">
-          <div class="journey-emoji">♟️</div>
+          <div class="journey-emoji">&#9823;</div>
           <div class="journey-week">Week 3</div>
-          <h3>Chess, Storytelling &amp; AI</h3>
-          <p>How can I think strategically and tell powerful stories? Chess, creative writing, and AI prompting.</p>
+          <h3>Thinker</h3>
+          <p>Chess, storytelling &amp; AI &mdash; how do I think, create, and understand technology?</p>
         </div>
         <div class="journey-dot"><span>3</span></div>
         <div class="journey-spacer"></div>
       </div>
 
-      <!-- Week 4 -->
       <div class="journey-step" style="--step-color:#F0B870">
         <div class="journey-spacer"></div>
         <div class="journey-dot"><span>4</span></div>
         <div class="journey-card journey-card--bottom">
-          <div class="journey-emoji">🎨</div>
+          <div class="journey-emoji">&#127912;</div>
           <div class="journey-week">Week 4</div>
-          <h3>Culture, Calligraphy &amp; Soroban</h3>
-          <p>How can different cultures help us grow? Chinese discovery, Arabic calligraphy, and mental arithmetic.</p>
+          <h3>Creator</h3>
+          <p>Culture, calligraphy &amp; soroban &mdash; how do I honor heritage and create beauty?</p>
         </div>
       </div>
 
-      <!-- Week 5 -->
       <div class="journey-step" style="--step-color:#A07EC8">
         <div class="journey-card journey-card--top">
-          <div class="journey-emoji">🎉</div>
+          <div class="journey-emoji">&#127942;</div>
           <div class="journey-week">Week 5</div>
-          <h3>AMALY Festival</h3>
-          <p>What have I discovered, created, and achieved? Showcase, celebrate, and launch your impact on the world.</p>
+          <h3>Festival</h3>
+          <p>The grand finale &mdash; showcase projects, celebrate growth, and share the journey.</p>
         </div>
         <div class="journey-dot"><span>5</span></div>
         <div class="journey-spacer"></div>
       </div>
+
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="summer-camp.html" class="btn btn-primary">See Full Program &rarr;</a>
     </div>
   </div>
 </section>
 
-<!-- SECTION 6: TESTIMONIALS -->
-<section class="testimonials">
+<!-- TESTIMONIALS -->
+<section class="testimonials fullpage-section">
   <div class="container">
     <div style="text-align:center;">
-      <div class="section-label">Families Love AMALY</div>
-      <h2 class="section-title">Hear It From the Children &amp; Parents</h2>
-      <p class="section-sub">Real stories from families who lived the AMALY experience —
-        in their own words, on their own screens.</p>
+      <div class="section-label">Real Stories</div>
+      <h2 class="section-title">What Families Say</h2>
+      <p class="section-sub">From Morocco to Europe to the Gulf &mdash; families who have seen AMALY&rsquo;s impact firsthand.</p>
     </div>
     <div class="testimonials-grid">
-
       <div class="testimonial-card">
-        <div class="yt-placeholder">
-          <div class="yt-thumb">
-            <div class="yt-play">▶</div>
-            <div class="yt-label">Parent Testimonial</div>
-          </div>
-        </div>
-        <div class="testimonial-body">
-          <p class="testimonial-quote">"My daughter woke up every morning excited to open Google Classroom. AMALY gave her a sense of purpose I hadn't seen before."</p>
-          <div class="testimonial-author">
-            <strong>Yasmine B.</strong>
-            <span>Parent, Casablanca</span>
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">&ldquo;My daughter came back from each session excited and proud. She made a calligraphy piece she still has on her wall. AMALY gave her something school never did &mdash; a sense of who she is.&rdquo;</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div>
+            <div class="testimonial-name">Samira M.</div>
+            <div class="testimonial-role">Mother of Lina, 10 &middot; Casablanca</div>
           </div>
         </div>
       </div>
-
       <div class="testimonial-card">
-        <div class="yt-placeholder">
-          <div class="yt-thumb">
-            <div class="yt-play">▶</div>
-            <div class="yt-label">Child Showcase</div>
-          </div>
-        </div>
-        <div class="testimonial-body">
-          <p class="testimonial-quote">"I learned chess, made a poster about the world, and my family did challenges with me every Friday. It was the best summer ever."</p>
-          <div class="testimonial-author">
-            <strong>Adam, Age 9</strong>
-            <span>AMALY Camper</span>
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">&ldquo;My son wouldn&rsquo;t stop talking about his chess games and his SDG project. The kids are challenged, engaged, and genuinely having fun &mdash; while building real skills.&rdquo;</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">K</div>
+          <div>
+            <div class="testimonial-name">Karim B.</div>
+            <div class="testimonial-role">Father of Youssef, 12 &middot; Paris</div>
           </div>
         </div>
       </div>
-
       <div class="testimonial-card">
-        <div class="yt-placeholder">
-          <div class="yt-thumb">
-            <div class="yt-play">▶</div>
-            <div class="yt-label">Family Story</div>
-          </div>
-        </div>
-        <div class="testimonial-body">
-          <p class="testimonial-quote">"What surprised me most was how AMALY connected the learning to our identity and values. It wasn't just activities — it was growth."</p>
-          <div class="testimonial-author">
-            <strong>Fatima R.</strong>
-            <span>Parent, Paris</span>
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">&ldquo;As Moroccan parents in Canada, we wanted our children to feel connected to their roots. AMALY delivered that &mdash; and so much more. A program we recommend to every family we know.&rdquo;</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">N</div>
+          <div>
+            <div class="testimonial-name">Nadia &amp; Omar R.</div>
+            <div class="testimonial-role">Parents of twins, 8 &middot; Montr&eacute;al</div>
           </div>
         </div>
       </div>
-
     </div>
-    <p style="text-align:center; color:var(--gray-lt); font-size:0.82rem; margin-top:12px;">
-      Video testimonials will be embedded here. Placeholders shown above.
-    </p>
   </div>
 </section>
 
-<!-- SECTION 7: FOLLOW US -->
-<section class="social-channels">
+<!-- SOCIAL CHANNELS -->
+<section class="social-channels fullpage-section">
   <div class="container">
     <div style="text-align:center;">
-      <div class="section-label">Follow AMALY</div>
-      <h2 class="section-title">Watch Us. Follow Us. Join the Community.</h2>
-      <p class="section-sub">Videos, activities, testimonials, and inspiration — across every platform where families connect.</p>
+      <div class="section-label">Stay Connected</div>
+      <h2 class="section-title">Follow the AMALY Universe</h2>
+      <p class="section-sub">Behind-the-scenes content, activity ideas, and updates &mdash; follow us on every platform.</p>
     </div>
-    <div class="social-channels-grid">
-
-      <!-- YouTube -->
-      <a href="https://www.youtube.com/@Amaly.ma-Official" target="_blank" rel="noopener" class="social-channel-card sc-youtube">
+    <div class="sc-grid">
+      <a href="https://www.instagram.com/amalykidsclub/" target="_blank" rel="noopener" class="sc-card sc-instagram">
         <div class="sc-header">
-          <div class="sc-logo">
-            <img src="images/youtube.svg" alt="YouTube" />
+          <img src="images/instagram.svg" alt="Instagram" class="sc-logo" />
+          <div>
+            <div class="sc-platform">Instagram</div>
+            <div class="sc-handle">@amalykidsclub</div>
           </div>
-          <div class="sc-platform">YouTube</div>
         </div>
-        <div class="sc-name">Amaly.ma Official</div>
-        <div class="sc-desc">Workshops, camp highlights, testimonials, and educational videos for children and families.</div>
-        <div class="sc-cta">Watch on YouTube →</div>
+        <p class="sc-desc">Daily activity ideas, camp previews, and colorful moments from the AMALY community.</p>
+        <div class="sc-cta">Follow &rarr;</div>
       </a>
-
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/amalykidsclub/" target="_blank" rel="noopener" class="social-channel-card sc-instagram">
+      <a href="https://www.youtube.com/@Amaly.ma-Official" target="_blank" rel="noopener" class="sc-card sc-youtube">
         <div class="sc-header">
-          <div class="sc-logo">
-            <img src="images/instagram.svg" alt="Instagram" />
+          <img src="images/youtube.svg" alt="YouTube" class="sc-logo" />
+          <div>
+            <div class="sc-platform">YouTube</div>
+            <div class="sc-handle">@Amaly.ma-Official</div>
           </div>
-          <div class="sc-platform">Instagram</div>
         </div>
-        <div class="sc-name">@amalykidsclub</div>
-        <div class="sc-desc">Daily inspiration, camp moments, activities for children, and behind-the-scenes from the AMALY team.</div>
-        <div class="sc-cta">Follow on Instagram →</div>
+        <p class="sc-desc">Full workshop replays, parent guides, and learning videos &mdash; everything in one place.</p>
+        <div class="sc-cta">Watch &rarr;</div>
       </a>
-
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/company/amaly-sustainable-development-environment-moroccan-association/" target="_blank" rel="noopener" class="social-channel-card sc-linkedin">
+      <a href="https://www.linkedin.com/company/amaly-sustainable-development-environment-moroccan-association/" target="_blank" rel="noopener" class="sc-card sc-linkedin">
         <div class="sc-header">
-          <div class="sc-logo">
-            <img src="images/linkedin.svg" alt="LinkedIn" />
+          <img src="images/linkedin.svg" alt="LinkedIn" class="sc-logo" />
+          <div>
+            <div class="sc-platform">LinkedIn</div>
+            <div class="sc-handle">AMALY Association</div>
           </div>
-          <div class="sc-platform">LinkedIn</div>
         </div>
-        <div class="sc-name">AMALY — Sustainable Development</div>
-        <div class="sc-desc">Our NGO's mission, partnerships, research, and impact on children's education in Morocco and beyond.</div>
-        <div class="sc-cta">Connect on LinkedIn →</div>
+        <p class="sc-desc">Research, pedagogy updates, and the impact story behind the AMALY mission.</p>
+        <div class="sc-cta">Connect &rarr;</div>
       </a>
-
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="home-cta">
+<!-- CTA -->
+<section class="home-cta fullpage-section">
   <div class="container">
-    <div class="section-label">Ready to Start?</div>
-    <h2 class="section-title">Give Your Child the Summer of a Lifetime</h2>
-    <p class="section-sub">Secure your spot in AMALY Summer Camp 2026. Limited places available.</p>
-    <a href="register.html" class="btn btn-primary btn-lg">Join Summer Camp →</a>
+    <div class="section-label">Limited Spots</div>
+    <h2 class="section-title">Give Your Child an Unforgettable Summer</h2>
+    <p class="section-sub">5 weeks. 5 pillars. Daily live sessions. A certificate. A portfolio.<br>And a child who comes back knowing who they are.</p>
+    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:8px;">
+      <a href="register.html" class="btn btn-primary btn-lg">Register Now &rarr;</a>
+      <a href="summer-camp.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.4);color:white;">See Full Program</a>
+    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="fullpage-section">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="images/amaly-logo-header.png" alt="AMALY" style="height:44px;width:auto;margin-bottom:16px;filter:brightness(0) invert(1);opacity:0.9;" />
-        <p>A learning adventure where children build character, creativity, future skills, and confidence while making a positive impact in the world.</p>
+        <p>A learning adventure where children build character, creativity, future skills, and confidence.</p>
         <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Instagram">📷</a>
-          <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
-          <a href="#" class="social-link" aria-label="Facebook">📘</a>
-          <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+          <a href="https://www.instagram.com/amalykidsclub/" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="images/instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.youtube.com/@Amaly.ma-Official" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">
+            <img src="images/youtube.svg" alt="YouTube" /></a>
+          <a href="https://www.linkedin.com/company/amaly-sustainable-development-environment-moroccan-association/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="images/linkedin.svg" alt="LinkedIn" /></a>
         </div>
       </div>
       <div>
         <h4>Program</h4>
         <ul>
-          <li><a href="summer-camp.html">Summer Camp 2026</a></li>
-          <li><a href="summer-camp.html#packages">Packages</a></li>
-          <li><a href="summer-camp.html#rhythm">Weekly Rhythm</a></li>
+          <li><a href="summer-camp.html">Summer Camp</a></li>
           <li><a href="register.html">Register</a></li>
         </ul>
       </div>
       <div>
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About AMALY</a></li>
-          <li><a href="about.html#values">Our Values</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Contact</h4>
         <ul>
           <li><a href="mailto:contact@amaly.ma">contact@amaly.ma</a></li>
-          <li><a href="https://amaly.ma" target="_blank" rel="noopener">amaly.ma</a></li>
-          <li><a href="https://amalykidsclub.com" target="_blank" rel="noopener">amalykidsclub.com</a></li>
           <li><a href="https://www.instagram.com/amalykidsclub/" target="_blank" rel="noopener">@amalykidsclub</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 AMALY Universe. All rights reserved.</span>
-      <span>Made with ❤️ for the children of tomorrow</span>
+      <span>&copy; 2026 AMALY Universe. All rights reserved.</span>
+      <span>Made with &#10084;&#65039; for the children of tomorrow</span>
     </div>
   </div>
 </footer>
+
+<!-- WHATSAPP WIDGET -->
+<div class="wa-widget" id="waWidget">
+  <div class="wa-bubble" id="waBubble" style="display:none;">
+    <div class="wa-bubble-header">
+      <div class="wa-avatar">A</div>
+      <div>
+        <div class="wa-name">AMALY Support</div>
+        <div class="wa-status">Usually replies within minutes</div>
+      </div>
+      <button class="wa-close" id="waClose">&#x2715;</button>
+    </div>
+    <div class="wa-body">
+      <div class="wa-msg">
+        <div class="wa-msg-bubble">&#128075; Bonjour&nbsp;! Comment pouvons-nous vous aider avec le Summer Camp 2026&nbsp;?</div>
+        <div class="wa-msg-time">AMALY &middot; Now</div>
+      </div>
+    </div>
+    <div class="wa-input-row">
+      <input type="text" class="wa-input" id="waInput" placeholder="Type a message&hellip;" />
+      <button class="wa-send" id="waSend">&#10148;</button>
+    </div>
+  </div>
+  <button class="wa-toggle" id="waToggle" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </button>
+</div>
 
 <script src="js/main.js"></script>
 </body>
