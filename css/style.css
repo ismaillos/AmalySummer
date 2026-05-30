@@ -272,7 +272,7 @@ section { padding: 96px 0; }
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 88px;
+  height: 158px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -378,7 +378,7 @@ section { padding: 96px 0; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 96px; /* navbar + stripe */
+  padding-top: 168px; /* navbar + stripe */
 }
 
 /* Wavy bottom edge like the original site */
@@ -1101,7 +1101,7 @@ footer ul li a:hover { color: var(--primary); }
   background: var(--navy);
   display: flex;
   align-items: center;
-  padding-top: 96px;
+  padding-top: 168px;
   position: relative;
   overflow: hidden;
 }
