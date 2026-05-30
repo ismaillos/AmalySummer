@@ -70,29 +70,40 @@ ul { list-style: none; }
 }
 
 .section-label {
-  display: inline-block;
+  display: block;
+  text-align: center;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--primary);
-  background: rgba(240,123,63,0.1);
-  padding: 6px 18px;
-  border-radius: 100px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.section-label span,
+.section-label {
+  /* pill wrapper when used inline */
+}
+
+section > .container > .section-label,
+section > .container > div > .section-label {
+  display: block;
+  text-align: center;
 }
 
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   margin-bottom: 16px;
   color: var(--navy);
+  text-align: center;
 }
 
 .section-sub {
   font-size: 1.05rem;
   color: var(--gray);
-  max-width: 600px;
+  max-width: 620px;
   margin: 0 auto 52px;
+  text-align: center;
   line-height: 1.7;
 }
 
@@ -567,7 +578,7 @@ section { padding: 96px 0; }
 
 .promises-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
   margin-top: 48px;
 }
