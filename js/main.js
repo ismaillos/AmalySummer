@@ -175,6 +175,131 @@ function showToast(message, type = 'success') {
   }, 4000);
 }
 
+// --- FULLPAGE SCROLL ---
+(function () {
+  // Only activate on home page (index.html or root)
+  const page = window.location.pathname.split('/').pop();
+  if (page !== '' && page !== 'index.html') return;
+
+  const SECTIONS = [
+    { el: null, selector: '.hero',            label: 'Home' },
+    { el: null, selector: '.promises',        label: '5 Pillars' },
+    { el: null, selector: '.themes',          label: 'Explore' },
+    { el: null, selector: '.testimonials',    label: 'Testimonials' },
+    { el: null, selector: '.social-channels', label: 'Follow Us' },
+    { el: null, selector: '.home-cta',        label: 'Register' },
+    { el: null, selector: 'footer',           label: 'Info' },
+  ];
+
+  // Resolve elements
+  SECTIONS.forEach(s => { s.el = document.querySelector(s.selector); });
+  const valid = SECTIONS.filter(s => s.el);
+  if (valid.length < 2) return;
+
+  let current = 0;
+  let locked = false;
+  const LOCK_MS = 900;
+
+  // --- Build side dots ---
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'fp-dots';
+  valid.forEach((s, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'fp-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('data-label', s.label);
+    dot.setAttribute('aria-label', s.label);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+  document.body.appendChild(dotsWrap);
+
+  // --- Build scroll arrow hint ---
+  const arrow = document.createElement('div');
+  arrow.className = 'fp-arrow';
+  arrow.innerHTML = '<span></span><span></span>';
+  document.body.appendChild(arrow);
+
+  function getDots() { return dotsWrap.querySelectorAll('.fp-dot'); }
+
+  function updateDots(idx) {
+    getDots().forEach((d, i) => d.classList.toggle('active', i === idx));
+  }
+
+  function updateArrow(idx) {
+    arrow.classList.toggle('hidden', idx >= valid.length - 1);
+  }
+
+  function goTo(idx) {
+    if (locked) return;
+    idx = Math.max(0, Math.min(valid.length - 1, idx));
+    if (idx === current) return;
+    locked = true;
+    current = idx;
+    valid[idx].el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    updateDots(idx);
+    updateArrow(idx);
+    setTimeout(() => { locked = false; }, LOCK_MS);
+  }
+
+  // Detect current section from scroll position
+  function detectCurrent() {
+    const mid = window.scrollY + window.innerHeight / 3;
+    let found = 0;
+    valid.forEach((s, i) => {
+      const top = s.el.getBoundingClientRect().top + window.scrollY;
+      if (top <= mid) found = i;
+    });
+    if (found !== current) {
+      current = found;
+      updateDots(found);
+      updateArrow(found);
+    }
+  }
+
+  // --- Wheel interception ---
+  let wheelAccum = 0;
+  const WHEEL_THRESHOLD = 80;
+
+  window.addEventListener('wheel', (e) => {
+    // Let inner scrollable elements scroll naturally
+    const target = e.target.closest('.faq-answer, .mobile-nav');
+    if (target) return;
+
+    e.preventDefault();
+    if (locked) return;
+
+    wheelAccum += e.deltaY;
+    if (Math.abs(wheelAccum) >= WHEEL_THRESHOLD) {
+      goTo(current + (wheelAccum > 0 ? 1 : -1));
+      wheelAccum = 0;
+    }
+  }, { passive: false });
+
+  // --- Keyboard navigation ---
+  window.addEventListener('keydown', (e) => {
+    if (['ArrowDown', 'PageDown'].includes(e.key)) { e.preventDefault(); goTo(current + 1); }
+    if (['ArrowUp', 'PageUp'].includes(e.key))   { e.preventDefault(); goTo(current - 1); }
+  });
+
+  // --- Touch swipe ---
+  let touchStartY = 0;
+  window.addEventListener('touchstart', (e) => { touchStartY = e.touches[0].clientY; }, { passive: true });
+  window.addEventListener('touchend', (e) => {
+    const diff = touchStartY - e.changedTouches[0].clientY;
+    if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+  }, { passive: true });
+
+  // Sync on regular scroll (user drags scrollbar etc.)
+  let scrollTimer;
+  window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(detectCurrent, 80);
+  }, { passive: true });
+
+  // Init arrow
+  updateArrow(0);
+})();
+
 // --- WHATSAPP WIDGET ---
 (function () {
   const WA_NUMBER = '212661527252';
